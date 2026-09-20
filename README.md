@@ -9,7 +9,7 @@ Welcome to my **CodeAlpha Web Development Internship** task repository! This rep
 | # | Task Name | Description | Tech Stack | Status | Folder Link |
 |---|---|---|---|---|---|
 | **01** | **SocialSphere** | Production-quality Social Media Platform with real-time style feed, stories, micro-interactions, dark mode, and direct messaging. | React.js, JavaScript (JSX), CSS3, Context API, React Router, LocalStorage | **Completed** ✅ | [View Project](./Task-1-Social-Media-Platform) |
-| **02** | **Task 2** | Upcoming Internship Assignment 2 | *To be announced* | ⏳ *Pending* | [View Folder](./Task-2) |
+| **02** | **TaskFlow** | Smart SaaS Project Management Dashboard with native HTML5 drag-and-drop Kanban board, milestone tracking, deadline calendar, team directory, and visual analytics. | React.js, JavaScript (JSX), CSS3, Context API, React Router, LocalStorage, Lucide Icons | **Completed** ✅ | [View Project](./Task-2) |
 | **03** | **Task 3** | Upcoming Internship Assignment 3 | *To be announced* | ⏳ *Pending* | [View Folder](./Task-3) |
 
 ---
@@ -28,6 +28,25 @@ A modern, responsive, and visually stunning social media web application featuri
 - **Strictly Pure React**: 100% JavaScript + JSX + CSS (zero TypeScript).
 
 👉 **[Read full Task 1 Documentation & Setup Guide](./Task-1-Social-Media-Platform/README.md)**
+
+---
+
+## 🌟 Task 2: TaskFlow — Smart Project Management
+
+A full-featured, production-grade Project Management SaaS application featuring:
+
+- **Executive Dashboard**: Real-time project overview, active metric counters, progress cards, and upcoming deadline list.
+- **Kanban Board with Native Drag-and-Drop**: 5 horizontal workflow stages (*Backlog*, *Todo*, *In Progress*, *Review*, *Done*) with fluid HTML5 drag & drop and instant LocalStorage synchronization.
+- **Task Lifecycle & Subtasks**: Complete modal editors, priority flags (*Low*, *Medium*, *High*, *Urgent*), subtask checklist with dynamic progress bar, and audit activity trail.
+- **Live Comments**: Instant comment streams on every task with author badges and relative timestamps.
+- **Interactive Project Calendar**: Month view displaying task due date badges with click-to-view modal preview.
+- **Team Management**: Team directory with role badges, avatar cards, and active task load metrics.
+- **Visual Analytics & Reports**: CSS-powered status breakdown charts, project completion percentages, and weekly activity tracker.
+- **Global Search & Quick Add**: Instant header search across tasks, projects, and team members; 1-click quick creation menus.
+- **Dark / Light Mode**: Seamless theme toggling persisted across sessions.
+- **Strictly Pure React**: 100% JavaScript + JSX + CSS (zero TypeScript).
+
+👉 **[Read full Task 2 Documentation & Setup Guide](./Task-2/README.md)**
 
 ---
 
@@ -51,11 +70,24 @@ codealpha_tasks/
 │   │   └── main.jsx                          # Root entrypoint
 │   ├── index.html                            # HTML5 root with SEO tags
 │   ├── package.json                          # Dependencies & scripts
-│   ├── vite.config.js                        # Vite bundler configuration
+│   ├── vite.config.js                        # Vite bundler configuration (Port 5173)
 │   └── README.md                             # Detailed Task 1 documentation
 │
-├── Task-2/                                   # Task 2 (Ready for upcoming assignment)
-│   └── README.md
+├── Task-2/                                   # Task 2: TaskFlow Project Management Tool
+│   ├── public/                               # Favicons and static assets
+│   ├── src/
+│   │   ├── components/                       # Kanban, Dashboard, Tasks, Team & Common UI
+│   │   ├── context/                          # Task, Project, Theme, and Toast Contexts
+│   │   ├── data/                             # Seed projects, tasks, users, notifications
+│   │   ├── pages/                            # Dashboard, Board, MyTasks, Calendar, Team, Reports
+│   │   ├── styles/                           # CSS design system & animation keyframes
+│   │   ├── utils/                            # Date helpers & safe LocalStorage handlers
+│   │   ├── App.jsx                           # Application router & providers
+│   │   └── main.jsx                          # Root entrypoint
+│   ├── index.html                            # HTML5 root with SEO tags
+│   ├── package.json                          # Dependencies: react, react-dom, react-router-dom, lucide-react
+│   ├── vite.config.js                        # Vite bundler configuration (Port 5174)
+│   └── README.md                             # Detailed Task 2 documentation
 │
 └── Task-3/                                   # Task 3 (Ready for upcoming assignment)
     └── README.md
@@ -65,20 +97,22 @@ codealpha_tasks/
 
 ## 🚀 Getting Started
 
-### Running Task 1 Locally
+### Running Task 1 (SocialSphere) Locally
 
 ```bash
-# 1. Navigate to Task 1 directory
 cd Task-1-Social-Media-Platform
-
-# 2. Install dependencies
 npm install
-
-# 3. Start development server
 npm run dev
+# Running on http://localhost:5173/
+```
 
-# 4. Open in browser
-# http://localhost:5173/
+### Running Task 2 (TaskFlow) Locally
+
+```bash
+cd Task-2
+npm install
+npm run dev
+# Running on http://localhost:5174/
 ```
 
 ---

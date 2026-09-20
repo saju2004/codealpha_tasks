@@ -1,0 +1,62 @@
+/* Responsive Breakpoints for TaskFlow */
+
+.desktop-sidebar {
+  display: flex;
+}
+
+.desktop-header-container {
+  display: block;
+}
+
+.mobile-nav-bar {
+  display: none;
+}
+
+.mobile-header-bar {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .page-content {
+    padding: 1.25rem 1.5rem 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-sidebar {
+    display: none !important;
+  }
+
+  .desktop-header-container {
+    display: none !important;
+  }
+
+  .mobile-header-bar {
+    display: flex !important;
+  }
+
+  .mobile-nav-bar {
+    display: flex !important;
+  }
+
+  .page-content {
+    padding: 1rem 1rem calc(var(--bottom-nav-height) + 1.25rem) 1rem;
+  }
+
+  /* Kanban board horizontal scrolling */
+  .kanban-board-container {
+    overflow-x: auto !important;
+    padding-bottom: 1rem !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .kanban-column {
+    min-width: 280px !important;
+    width: 280px !important;
+  }
+
+  /* Single column forms on mobile */
+  .form-grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+}

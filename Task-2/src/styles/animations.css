@@ -1,0 +1,128 @@
+/* Keyframe Animations for TaskFlow */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Modal Zoom & Backdrop */
+@keyframes modalBackdropFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalContentZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-backdrop-animate {
+  animation: modalBackdropFade 0.2s ease-out forwards;
+}
+
+.modal-content-animate {
+  animation: modalContentZoom 0.24s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Dropdown Menu */
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-dropdown {
+  animation: dropdownSlide 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: top;
+}
+
+/* Toast Slide In */
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.animate-toast {
+  animation: toastSlideIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Skeleton Shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--surface-secondary) 25%,
+    var(--border) 50%,
+    var(--surface-secondary) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+/* Dragging States */
+.task-card-dragging {
+  opacity: 0.45 !important;
+  transform: scale(1.02) rotate(1.5deg) !important;
+  box-shadow: var(--shadow-drag) !important;
+  cursor: grabbing !important;
+}
+
+.column-drag-target {
+  background-color: var(--column-target-bg) !important;
+  outline: 2px dashed var(--primary) !important;
+  outline-offset: -2px !important;
+}
+
+/* Micro Interactions */
+.interactive-btn {
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.interactive-btn:hover {
+  transform: translateY(-1px);
+}
+
+.interactive-btn:active {
+  transform: translateY(0.5px) scale(0.98);
+}
+
+.task-card-hover {
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.task-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--card-hover-border);
+}
